@@ -1,15 +1,14 @@
 
 
 local Gaze = [[
-Gaze Bypass Tutorial:
-"https://youtube.com/shorts/z1yCdkbXTi4?si=f1ol4wCL4jxW3jtP"
+
 ]]
 
 everyClipboard = setclipboard or toclipboard or set_clipboard or (Clipboard and Clipboard.set)
 
 
 
-local GazerHa_Cooldown = 0.8
+local GazerHa_Cooldown = 0.1
 
 
 
