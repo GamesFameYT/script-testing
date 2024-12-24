@@ -1,3 +1,8 @@
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+
+local yapping = false
 
 
 local Gaze = [[
@@ -9,7 +14,7 @@ everyClipboard = setclipboard or toclipboard or set_clipboard or (Clipboard and 
 
 
 
-local GazerHa_Cooldown = 0.01
+local GazerHa_Cooldown = 0.2
 
 
 
@@ -33,19 +38,12 @@ if not coreGay:FindFirstChild(guiName) then
     
     screenGui.Parent = coreGay
 
-    print("â€¢   Gaze bypass âˆš loaded.")
+    print("•   Gaze bypass √ loaded.")
 else
    
-    print("â€¢   Gaze bypass âˆš is already executed..")
+    print("•   Gaze bypass √ is already executed..")
     return
 end
-
-
-
-
-
-
-
 
 
 
@@ -86,20 +84,30 @@ local function fadeTextThatMadeByChatGpt(labeltext)
     screenGui:Destroy()
 end
 
-fadeTextThatMadeByChatGpt("Made By Gazer Ha")
+if yapping then
 
-fadeTextThatMadeByChatGpt("hello welcome back to fadeTextThatMadeByChatGpt23")
+fadeTextThatMadeByChatGpt("Made By GazerHa")
+fadeTextThatMadeByChatGpt("ROBLOX STOP PATCHING MY OPEN SOURCED SCRIPT \u{1F62D}")
+fadeTextThatMadeByChatGpt("Unpatched, but its not good as before.")
 
-fadeTextThatMadeByChatGpt("For Better Bypass\nRead Your Clipboard")
+fadeTextThatMadeByChatGpt("TO MAKE THE BYPASS WORK\nRead Your Clipboard")
 
+everyClipboard(tostring(Gaze))
 task.wait(0.5)
 
 
 fadeTextThatMadeByChatGpt("READ THE TUTORIAL ON YOUR COPY")
+end
+
+
+
+
+
+
+
 
 
 -- here
-
 
 
 
@@ -130,51 +138,53 @@ if not string.find(input, " ") then
     end
     
 local replacements = {
-        sex = "sâ€¢â€¢â€¢â€¢â€¢â€¢eâ€¢xâ€¢",
-        Sex = "Sâ€¢â€¢â€¢â€¢â€¢â€¢eâ€¢x",
-        SEX = "Sâ€¢â€¢â€¢â€¢â€¢â€¢Eâ€¢X",
-        ass = "â€¢aâ€¢â€¢â€¢â€¢â€¢â€¢sâ€¢sâ€¢",
-        Ass = "â€¢Aâ€¢â€¢â€¢â€¢â€¢â€¢sâ€¢sâ€¢",
-        ASS = "â€¢Aâ€¢â€¢â€¢â€¢â€¢â€¢Sâ€¢Sâ€¢",
-        fuck = "fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢",
-        Fuck = "Fâ€¢â€¢â€¢â€¢â€¢â€¢uâ€¢câ€¢kâ€¢",
-        FUCK = "Fâ€¢â€¢â€¢â€¢â€¢â€¢Uâ€¢Câ€¢Kâ€¢",
-        damn = "â€¢dâ€¢â€¢â€¢â€¢â€¢â€¢aâ€¢â€¢mâ€¢â€¢nâ€¢",
-        Damn = "â€¢Dâ€¢â€¢â€¢â€¢â€¢â€¢aâ€¢â€¢mâ€¢â€¢nâ€¢",
-        DAMN = "â€¢Dâ€¢â€¢â€¢â€¢â€¢â€¢Aâ€¢â€¢Mâ€¢â€¢Nâ€¢",
-        shit = "â€¢sâ€¢â€¢â€¢â€¢â€¢â€¢hâ€¢iâ€¢tâ€¢",
-        Shit = "â€¢Sâ€¢â€¢â€¢â€¢â€¢â€¢hâ€¢iâ€¢tâ€¢",
-        SHIT = "â€¢Sâ€¢â€¢â€¢â€¢â€¢â€¢Hâ€¢Iâ€¢Tâ€¢",
-        pornhub = "â€¢pâ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢râ€¢nâ€¢â€¢â€¢hâ€¢â€¢â€¢ubâ€¢",
-        Pornhub = "â€¢Pâ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢râ€¢nâ€¢â€¢â€¢hâ€¢â€¢â€¢ubâ€¢",
-        porn = "â€¢pâ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢râ€¢nâ€¢",
-        Porn = "â€¢Pâ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢râ€¢nâ€¢",
-        PORN = "â€¢Pâ€¢â€¢â€¢â€¢â€¢â€¢Oâ€¢Râ€¢Nâ€¢",
-        bitch = "â€¢bâ€¢iâ€¢tâ€¢â€¢â€¢câ€¢hâ€¢",
-        Bitch = "â€¢Bâ€¢iâ€¢tâ€¢â€¢â€¢câ€¢hâ€¢",
-        BITCH = "â€¢Bâ€¢Iâ€¢Tâ€¢â€¢â€¢Câ€¢Hâ€¢",
-        nigga = "nâ€¢iâ€¢gâ€¢â€¢â€¢gâ€¢a",
-        nigger = "nâ€¢iâ€¢gâ€¢â€¢â€¢gâ€¢eâ€¢râ€¢â€¢",
-        Nigga = "Nâ€¢iâ€¢gâ€¢â€¢â€¢gâ€¢a",
-        Nigger = "Nâ€¢iâ€¢gâ€¢â€¢â€¢gâ€¢eâ€¢râ€¢â€¢",
-        NIGGER = "Nâ€¢Iâ€¢Gâ€¢â€¢â€¢Gâ€¢Eâ€¢Râ€¢â€¢",
-        NIGGAS = "Nâ€¢Iâ€¢Gâ€¢â€¢â€¢Gâ€¢Aâ€¢Sâ€¢â€¢",
-        NIGGA = "Nâ€¢Iâ€¢Gâ€¢â€¢â€¢Gâ€¢Aâ€¢â€¢",
-        dick = "dâ€¢â€¢â€¢â€¢â€¢â€¢iâ€¢â€¢â€¢â€¢câ€¢kâ€¢â€¢",
-        Dick = "Dâ€¢â€¢â€¢â€¢â€¢â€¢iâ€¢â€¢â€¢â€¢câ€¢kâ€¢â€¢",
-        DICK = "Dâ€¢â€¢â€¢â€¢â€¢â€¢Iâ€¢â€¢â€¢â€¢Câ€¢Kâ€¢â€¢",
-        cock = "câ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢câ€¢kâ€¢",
-        Cock = "Câ€¢â€¢â€¢â€¢â€¢â€¢oâ€¢câ€¢kâ€¢",
-        COCK = "Câ€¢â€¢â€¢â€¢â€¢â€¢Oâ€¢Câ€¢Kâ€¢",
-        gay = "gâ€¢â€¢â€¢â€¢â€¢â€¢aâ€¢y",
-        Gay = "Ä¢â€¢â€¢â€¢â€¢â€¢â€¢aâ€¢y",
-        GAY = "Ä¢â€¢â€¢â€¢â€¢â€¢â€¢Aâ€¢Y",
-        pussy = "pâ€¢â€¢â€¢â€¢uâ€¢sâ€¢sâ€¢â€¢â€¢â€¢â€¢â€¢yâ€¢â€¢",
-        Pussy = "Pâ€¢â€¢â€¢â€¢uâ€¢sâ€¢sâ€¢â€¢â€¢â€¢â€¢â€¢yâ€¢â€¢",
-        PUSSY = "Pâ€¢â€¢â€¢â€¢Uâ€¢Sâ€¢Sâ€¢â€¢â€¢â€¢â€¢â€¢Yâ€¢â€¢",
-        breast = "â€¢bâ€¢râ€¢â€¢â€¢â€¢â€¢â€¢eâ€¢aâ€¢sâ€¢tâ€¢",
-        Breast = "â€¢Bâ€¢râ€¢â€¢â€¢â€¢â€¢â€¢eâ€¢aâ€¢sâ€¢tâ€¢",
-        BREAST ="â€¢Bâ€¢Râ€¢â€¢â€¢â€¢â€¢â€¢Eâ€¢Aâ€¢Sâ€¢Tâ€¢",
+        
+        ass = "•a••••••s•s•",
+        Ass = "•A••••••s•s•",
+        ASS = "•A••••••S•S•",
+        fuck = "f••••••u•c•k•",
+        Fuck = "F••••••u•c•k•",
+        FUCK = "F••••••U•C•K•",
+        damn = "•d••••••a••m••n•",
+        Damn = "•D••••••a••m••n•",
+        DAMN = "•D••••••A••M••N•",
+        sex = "s••.e••x",
+        Sex = "S••.••e••x",
+       SEX = "S.••E••X",
+        shit = "•s••••••h•i•t•",
+        Shit = "•S••••••h•i•t•",
+        SHIT = "•S••••••H•I•T•",
+        pornhub = "•p.••••••o•r•n•••h.•••ub•",
+        Pornhub = "•P.••••••o•r•n•••h.•••ub•",
+        porn = "•p.••••••o•r•n•",
+        Porn = "•P.••••••o•r•n•",
+        PORN = "•P.••••••O•R•N•",
+        bitch = "•b•.i•t•••c•h•",
+        Bitch = "•B.•i•t•••c•h•",
+        BITCH = "•B•.I•T•••C•H•",
+        nigga = "n•##.•••g•a",
+        nigger = "n•##.•••g•e•r••",
+        Nigga = "N•##.•••g•a",
+        Nigger = "N•##•.••g•e•r••",
+        NIGGER = "N•##.•••G•E•R••",
+        NIGGAS = "N•##•.••G•A•S••",
+        NIGGA = "N•##.••G•A••",
+        dick = "d••••••i.••••c•k••",
+        Dick = "D••••••i.••••c•k••",
+        DICK = "D••••••I.••••C•K••",
+        cock = "c••••••o.•c•k•",
+        Cock = "C••••••o.•c•k•",
+        COCK = "C••••••O.•C•K•",
+        gay = "g••••••a•y",
+        Gay = "G••••••a•y",
+        GAY = "G••••••A•Y",
+        pussy = "p••••u•s.•s••••••y••",
+        Pussy = "P••••u•s.•s••••••y••",
+        PUSSY = "P••••U•S.•S••••••Y••",
+        breast = "•b•r••••••.e•a•s•t•",
+        Breast = "•B•r••••••.e•a•s•t•",
+        BREAST ="•B•R••••••.E•A•S•T•",
+        
         ["0"] = "\xEF\xBC\x90",
 ["1"] = "\xEF\xBC\x91",
 ["2"] = "\xEF\xBC\x92",  
@@ -187,7 +197,7 @@ local replacements = {
 ["9"] = "\xEF\xBC\x99",  
 }
 
-    local lowerInput = input
+    local lowerInput = input:lower()
 
     
     for word, replacement in pairs(replacements) do
@@ -231,25 +241,35 @@ local replacements = {
         else
             result = result .. char
             
-            if i < #modifiedInput and modifiedInput:sub(i + 1, i + 1) ~= " " then
-                result = result .. "â€¢"
+            if i < #modifiedInput and i % 3 == 1 then
+    result = result .. ""
+
             end
         end
     end
 
     
     result = result:gsub("{", ""):gsub("}", "")
-    result = result:gsub("â€¢", "\xF3\xA0\x80\x80")
+        result = result:gsub("•", "\u{0327}")
+    result = result:gsub("I", "ℹ")
     result = result:gsub("|", "\r")
+
     
-    
-    
+    result = result:gsub("\u{0327}", "") --[[Remove Again LOLLLL 
+              (Get some furry fandom for ur work roblox)
+                   stepid facebook stalker #ss n**ga gr*y nerdyass delta f*ck"r]]
     
     
 
     
     local A_1 = result
-    everyClipboard(result)
+    local A_2 = "All"
+
+    if game:GetService("TextChatService"):FindFirstChild("TextChannels") then
+        game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(A_1)
+    else
+        game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer( A_1, A_2)
+    end
 end
     
 
@@ -284,7 +304,7 @@ GazerTitle.Position = UDim2.new(0, 0, 0, 0)
 GazerTitle.BackgroundColor3 = Color3.new(0, 0, 0)
 GazerTitle.BorderColor3 = Color3.new(0, 0, 0)
 GazerTitle.BorderSizePixel = 1
-GazerTitle.Text = "Gaze Bypass (Tutorial Recommended)"
+GazerTitle.Text = "Gaze Bypass (Tutorial needed)"
 GazerTitle.TextSize = 14
 GazerTitle.TextColor3 = Color3.new(1, 1, 1)
 GazerTitle.Font = Enum.Font.Bodoni
@@ -328,4 +348,4 @@ end)
 
 pcall(function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1price/usercreation/refs/heads/main/workspace/ACL%20-%20legacy.lua'))()
-end)
+    end
