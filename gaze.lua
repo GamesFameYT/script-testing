@@ -180,7 +180,7 @@ if not getgenv().d84jdnmasjdh43d and game.PlaceId == 6961824067 then
 
         r0_297:SetAttribute("LastTimeRankUpdate", os.clock())
       else
-        local r5_297 = "Rank" = r0_297:GetAttribute(r5_297) -- error: untaken top expr
+        
       end
     end
   end
